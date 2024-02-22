@@ -1,15 +1,22 @@
 #pool: MyAgentPool
 #steps:
 #- bash: echo hello world
-trigger:
--main
+# trigger
+# -main
 
-pool:
-  vmImage: ubuntu-latest
+# pool:
+#   vmImage: ubuntu-latest
 
-variables:
-  buildConfiguration: 'Release'
+# variables:
+#   buildConfiguration: 'Release'
 
-steps:
--script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+# steps:
+# -script: dotnet build
+
+# pool: MyAgentPool
+# task: DotNetCoreCLI@2
+#   inputs:
+#     command: 'build'
+#     projects: '**'
+#     arguments: '--configuration Release' $(buildConfiguration)
+# #   displayName: 'dotnet build $(buildConfiguration)'
